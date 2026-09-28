@@ -5,6 +5,13 @@ from pico2d import *
 open_canvas(800,600)
 character = load_image('character.png')
 
+
+def draw_character(x, y):
+    clear_canvas()
+    character.draw(x, y)
+    update_canvas()
+    delay(0.01)
+    
 def move_circle():
     print("CIRCLE")
     #캐릭터 이미지 표시
@@ -15,7 +22,9 @@ def move_circle():
 
 
 def move_top():
-    print("TOP")
+    for x in range(50, 751, 5):
+        character.draw(x, 550)
+        update_canvas()
     pass
 
 def move_right():
