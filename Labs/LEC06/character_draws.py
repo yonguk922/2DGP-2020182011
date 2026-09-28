@@ -26,6 +26,10 @@ def move_left():
     pass
 
 def move_rectangle():
+    move_top()
+    move_right()
+    move_bottom()
+    move_left()
     print("RECTANGLE")
     pass
 
