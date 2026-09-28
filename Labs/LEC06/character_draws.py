@@ -12,6 +12,19 @@ def move_circle():
     update_canvas()
     pass
 
+
+def move_top():
+    pass
+
+def move_right():
+    pass
+
+def move_bottom():
+    pass
+
+def move_left():
+    pass
+
 def move_rectangle():
     print("RECTANGLE")
     pass
