@@ -66,7 +66,6 @@ def move_triangle():
     move_ca()
 
 
-
 while True:
     #move_circle()
     move_rectangle()
