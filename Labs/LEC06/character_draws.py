@@ -52,8 +52,7 @@ def move_line(x0, y0, x1, y1, n=100):
         draw_character(x, y)
 
 def move_ab():
-    print("AB")
-    pass
+    move_line(100, 100, 700, 100)
 
 def move_bc():
     print("BC")
