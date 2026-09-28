@@ -44,6 +44,15 @@ def move_rectangle():
     print("RECTANGLE")
     pass
 
+def move_ab():
+    pass
+
+def move_bc():
+    pass
+
+def move_ca():
+    pass
+
 def move_triangle():
     print("TRIANGLE")
     pass
