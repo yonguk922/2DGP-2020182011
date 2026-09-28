@@ -55,8 +55,7 @@ def move_ab():
     move_line(100, 100, 700, 100)
 
 def move_bc():
-    print("BC")
-    pass
+    move_line(700, 100, 400, 500)
 
 def move_ca():
     print("CA")
