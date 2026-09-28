@@ -11,7 +11,7 @@ def draw_character(x, y):
     character.draw(x, y)
     update_canvas()
     delay(0.01)
-    
+
 def move_circle():
     print("CIRCLE")
     #캐릭터 이미지 표시
@@ -23,21 +23,18 @@ def move_circle():
 
 def move_top():
     for x in range(50, 751, 5):
-        character.draw(x, 550)
-        update_canvas()
-    pass
+        draw_character(x, 550)
 
 def move_right():
-    print("RIGHT")
-    pass
+    for y in range(550, 49, -5):
+        draw_character(750, y)
 
 def move_bottom():
-    print("BOTTOM")
-    pass
-
+    for x in range(750, 49, -5):
+        draw_character(x, 50)
 def move_left():
-    print("LEFT")
-    pass
+    for y in range(50, 551, 5):
+        draw_character(50, y)
 
 def move_rectangle():
     move_top()
