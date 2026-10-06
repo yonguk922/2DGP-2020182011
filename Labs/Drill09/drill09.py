@@ -65,6 +65,10 @@ while running:
     frame = (frame + 1) % 8
     x += dir_x * 5
     y += dir_y * 5
+
+    # 화면 경계를 벗어나지 않도록 위치를 제한 (캐릭터 크기 100x100의 절반 = 50)
+    x = max(50, min(x, TUK_WIDTH - 50))
+    y = max(50, min(y, TUK_HEIGHT - 50))
     delay(0.05)
 
 close_canvas()
