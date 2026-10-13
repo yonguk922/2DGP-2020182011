@@ -11,11 +11,15 @@ class Ball:
         self.x, self.y = random.randint(100,700), 599
         self.image = load_image('ball21x21.png')
 
-    def update(self):
+    def draw(self):
         self.image.draw(self.x,self.y)
 
     def update(self):
-        self.y -= 10
+        if (self.y > 50):
+            self.y -= 30
+        
+
+    
 
 class Boy:
     def __init__(self):
@@ -83,6 +87,9 @@ def reset_world():
 
     zombie1 = zombie()
     world.append(zombie1)
+
+    team2 = [Ball() for i in range(21)]
+    world += team2
     
 
     
