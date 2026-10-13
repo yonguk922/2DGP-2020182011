@@ -9,6 +9,7 @@ import random
 class Ball:
     def __init__(self):
         self.x, self.y = random.randint(100,700), 599
+        self.dropspeed = random.randint(10,50)
         self.image = load_image('ball21x21.png')
 
     def draw(self):
@@ -16,7 +17,7 @@ class Ball:
 
     def update(self):
         if (self.y > 50):
-            self.y -= 30
+            self.y -= self.dropspeed
         
 
     
