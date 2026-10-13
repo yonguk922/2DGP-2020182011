@@ -6,11 +6,25 @@ import random
 
 # 게임 객체를 파악한다
 # boy, grass 가 필요하다
-class Ball:
+class Sball:
     def __init__(self):
         self.x, self.y = random.randint(100,700), 599
         self.dropspeed = random.randint(10,50)
         self.image = load_image('ball21x21.png')
+
+    def draw(self):
+        self.image.draw(self.x,self.y)
+
+    def update(self):
+        if (self.y > 50):
+            self.y -= self.dropspeed
+
+
+class Bball:
+    def __init__(self):
+        self.x, self.y = random.randint(100,700), 599
+        self.dropspeed = random.randint(10,50)
+        self.image = load_image('ball41x41.png')
 
     def draw(self):
         self.image.draw(self.x,self.y)
@@ -89,8 +103,11 @@ def reset_world():
     zombie1 = zombie()
     world.append(zombie1)
 
-    team2 = [Ball() for i in range(21)]
+    team2 = [Bball() for i in range(11)]
     world += team2
+
+    team3 = [Sball() for i in range(11)]
+    world += team3
     
 
     
