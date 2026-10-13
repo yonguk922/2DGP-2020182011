@@ -7,7 +7,15 @@ import random
 # 게임 객체를 파악한다
 # boy, grass 가 필요하다
 class Ball:
-    pass
+    def __init__(self):
+        self.x, self.y = random.randint(100,700), 599
+        self.image = load_image('ball21x21.png')
+
+    def update(self):
+        self.image.draw(self.x,self.y)
+
+    def update(self):
+        self.y -= 10
 
 class Boy:
     def __init__(self):
